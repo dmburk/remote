@@ -1,17 +1,24 @@
 #!/usr/bin/ruby
 
 class Connection
-	def select
-		@server = gets.chomp
+	def list
+		View::prompt
 	end
 
-	def connect(server_id)
-		selection = @servers.find{|server| server[:id] == @server_id}	
-		if selection.nil?
-			puts "You did not make a valid selection."
+	def select
+		@selection = gets.chomp
+	end
+
+	# This should select which server you have chosen by id or server name.
+	# Executing the program should accept an argument to connect without displaying the prompt.
+	def connect(choice)
+		servers = Server::list
+		server = servers.find{|f| f[:id] == choice}	
+		if server.nil?
+			puts "Invalid selection."
 		else
-			puts "Connecting to #{selection[:name]}..."
-			system "ssh #{selection[:address]}"
+			puts "Connecting to #{server[:name]}..."
+			system "ssh #{server[:address]}"
 		end
 	end
 end

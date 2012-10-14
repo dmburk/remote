@@ -5,6 +5,7 @@ class View
 		Graphics::border
 		puts "Which server would you like to connect to?"
 		Server::list.each{|server| puts server[:id] + ". " + server[:name]}
+		# Server::list.each{|server| puts server[:id] + ". " + server[:name]}
 		Graphics::border
 		print "Select a number: "
 	end
