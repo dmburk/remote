@@ -13,6 +13,7 @@ class Connection
 	# Executing the program should accept an argument to connect without displaying the prompt.
 	def connect(choice)
 		servers = Server::list
+
 		server = servers.find{|f| f[:id] == choice}	
 		if server.nil?
 			puts "Invalid selection."

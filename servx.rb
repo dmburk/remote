@@ -1,4 +1,6 @@
 #!/usr/bin/ruby
+# Serv-X
+# This script will display a list of servers and connect via SSH to the selected server.
 require "servx_controller.rb"
 require "servx_model.rb"
 require "servx_view.rb"
@@ -8,13 +10,3 @@ require "servx_view.rb"
 server = @connection.select
 @connection.connect(server)
 
-
-
-# View::prompt
-
-# server = Connect.select
-# server.connect
-
-# connect = Remote.new
-# connect.prompt
-# connect.connect(gets.chomp)

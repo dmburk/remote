@@ -1,11 +1,10 @@
 #!/usr/bin/ruby
 
-class View
+module View
 	def self.prompt
 		Graphics::border
 		puts "Which server would you like to connect to?"
 		Server::list.each{|server| puts server[:id] + ". " + server[:name]}
-		# Server::list.each{|server| puts server[:id] + ". " + server[:name]}
 		Graphics::border
 		print "Select a number: "
 	end
