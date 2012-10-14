@@ -9,4 +9,3 @@ require "views.rb"
 @connection.list
 server = @connection.select
 @connection.connect(server)
-

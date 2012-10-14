@@ -1,6 +1,8 @@
 #!/usr/bin/ruby
 
 class Connection
+	attr_accessor :status
+
 	def list
 		View::prompt
 	end
@@ -17,6 +19,7 @@ class Connection
 		server = servers.find{|f| f[:id] == choice}	
 		if server.nil?
 			puts "Invalid selection."
+			self.status = :failed
 		else
 			puts "Connecting to #{server[:name]}..."
 			system "ssh #{server[:address]}"
