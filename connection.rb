@@ -1,4 +1,6 @@
 #!/usr/bin/ruby
+require 'servers'
+require 'views'
 
 class Connection
 	attr_accessor :status

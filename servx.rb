@@ -1,9 +1,7 @@
 #!/usr/bin/ruby
 # Serv-X
 # This script will display a list of servers and connect via SSH to the selected server.
-require "connection.rb"
-require "servers.rb"
-require "views.rb"
+require 'connection'
 
 @connection = Connection.new
 @connection.list
