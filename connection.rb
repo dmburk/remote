@@ -12,6 +12,7 @@ class Connection
 		@selection = gets.chomp
 	end
 
+	# TODO:
 	# This should select which server you have chosen by id or server name.
 	# Executing the program should accept an argument to connect without displaying the prompt.
 	def connect(choice)
