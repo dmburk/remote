@@ -5,13 +5,13 @@ class Server
 		list = [
 			{
 				:id => "1",
-				:name => "Home Server",
-				:address => "10.10.5.2"
+				:name => "Server 1",
+				:address => "192.168.1.2"
 			},
 			{
 				:id => "2",
-				:name => "Livezen",
-				:address => "livezen.net"
+				:name => "Server 2",
+				:address => "192.168.1.3"
 			}
 		]
 	end
